@@ -14,18 +14,26 @@
       <ul class="flex" style="gap: 1rem;">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="container">
-    <section id="home" class="p-3">
-      <h2>Welcome</h2>
-      <p>This is a general-purpose HTML template with a header, main content area, and footer.</p>
-      <button class="btn btn-primary">Get Started</button>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero flex-center text-center p-3">
+    <div>
+      <h2>Welcome to My Website</h2>
+      <p class="mt-1">Build something great with a clean, ready-to-use template.</p>
+      <button class="btn btn-primary mt-2">Get Started</button>
+    </div>
+  </section>
 
+  <main class="container">
+
+    <!-- About / Features Section -->
     <section id="about" class="grid grid-3 p-3">
       <div class="card">
         <h3>Feature One</h3>
@@ -41,6 +49,79 @@
       </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="p-3">
+      <h2 class="text-center mb-2">Gallery</h2>
+      <div class="grid grid-4">
+        <img src="https://via.placeholder.com/250" alt="Gallery image 1">
+        <img src="https://via.placeholder.com/250" alt="Gallery image 2">
+        <img src="https://via.placeholder.com/250" alt="Gallery image 3">
+        <img src="https://via.placeholder.com/250" alt="Gallery image 4">
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="p-3">
+      <h2 class="text-center mb-2">What People Say</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <p>"This product changed the way I work. Highly recommended!"</p>
+          <p class="text-bold mt-1">- Alex R.</p>
+        </div>
+        <div class="card">
+          <p>"Simple, clean, and effective. Exactly what I needed."</p>
+          <p class="text-bold mt-1">- Jamie K.</p>
+        </div>
+        <div class="card">
+          <p>"Great support and even better results."</p>
+          <p class="text-bold mt-1">- Morgan T.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="p-3">
+      <h2 class="text-center mb-2">Frequently Asked Questions</h2>
+      <div class="faq-item card mb-1">
+        <button class="faq-question flex-between" onclick="toggleFAQ(this)">
+          <span>What is this product?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>It's a starter template you can customize for your own project.</p>
+        </div>
+      </div>
+      <div class="faq-item card mb-1">
+        <button class="faq-question flex-between" onclick="toggleFAQ(this)">
+          <span>Is it free to use?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, feel free to use and modify it however you like.</p>
+        </div>
+      </div>
+      <div class="faq-item card mb-1">
+        <button class="faq-question flex-between" onclick="toggleFAQ(this)">
+          <span>Can I customize the design?</span>
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely — all styles are in the CSS file and easy to edit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="card p-3 mt-3 text-center">
+      <h2>Stay Updated</h2>
+      <p class="mt-1 mb-2">Subscribe to our newsletter for the latest news.</p>
+      <form class="flex-center" style="gap: 0.5rem;">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="p-3">
       <h2>Contact Us</h2>
       <form>
@@ -59,12 +140,46 @@
         <button type="submit" class="btn btn-primary">Send</button>
       </form>
     </section>
+
   </main>
 
-  <footer class="container text-center p-2 mt-3">
-    <p class="text-muted">&copy; 2026 My Website. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="container p-3 mt-3">
+    <div class="grid grid-3">
+      <div>
+        <h3>My Website</h3>
+        <p class="text-muted mt-1">Building great things, one line of code at a time.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <ul class="mt-1">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <ul class="mt-1">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center text-muted mt-3">&copy; 2026 My Website. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function toggleFAQ(button) {
+      const answer = button.nextElementSibling;
+      answer.style.display = answer.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+  <h2>Haseeb Akbar</h2>
+  <h3>Shahzaib Akbar</h3>
+  
 </body>
 </html>
